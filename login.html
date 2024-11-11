@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Welcome to Movie & TV Show Rating Website!</h1>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <p id="loginMessage"></p>
+    <p class="text-center mt-3">
+      Don't have an account? <a href="signup.html">Sign up here</a>.
+    </p>
+  </div>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      const user = JSON.parse(localStorage.getItem(username));
+
+      if (user && user.password === password) {
+        localStorage.setItem('isLoggedIn', true);
+        localStorage.setItem('currentUser', username);
+        window.location.href = 'index.html';
+      } else {
+        document.getElementById('loginMessage').textContent = 'Invalid username or password.';
+      }
+    });
+  </script>
+</body>
+</html>

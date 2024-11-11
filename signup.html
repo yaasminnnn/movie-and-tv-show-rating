@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Sign Up</h1>
+    <form id="signupForm">
+      <div class="form-group">
+        <label for="signupName">Name:</label>
+        <input type="text" id="signupName" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="signupEmail">Email:</label>
+        <input type="email" id="signupEmail" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="signupUsername">Username:</label>
+        <input type="text" id="signupUsername" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+    <p id="signupMessage"></p>
+    <p class="text-center mt-3">
+      Already have an account? <a href="login.html">Log in here</a>.
+    </p>
+  </div>
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('signupName').value.trim();
+      const email = document.getElementById('signupEmail').value.trim();
+      const username = document.getElementById('signupUsername').value.trim();
+      const password = document.getElementById('signupPassword').value.trim();
+      const messageElement = document.getElementById('signupMessage');
+      
+      if (!name || !email || !username || !password) {
+        messageElement.textContent = 'All fields are required.';
+        messageElement.style.color = 'red';
+        return;
+      }
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        messageElement.textContent = 'Invalid email format.';
+        messageElement.style.color = 'red';
+        return;
+      }
+
+      const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if (!passwordPattern.test(password)) {
+        messageElement.textContent = 'Password must be at least 8 characters long and include uppercase, lowercase, a number, and a special character.';
+        messageElement.style.color = 'red';
+        return;
+      }
+
+      if (localStorage.getItem(username)) {
+        messageElement.textContent = 'Username already exists. Please choose another.';
+        messageElement.style.color = 'red';
+        return;
+      }
+
+      const user = { name, email, username, password };
+      localStorage.setItem(username, JSON.stringify(user));
+      messageElement.textContent = 'Account created successfully! Please log in.';
+      messageElement.style.color = 'green';
+      
+      document.getElementById('signupForm').reset();
+    });
+  </script>
+</body>
+</html>

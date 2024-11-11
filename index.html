@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Shows and Movies</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Movie & TV Show Rating</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">My profile</a>
+            </li>
+            <li class="nav-item">
+              <button id="contactUsBtn" class="btn btn-primary ml-2 custom-btn-spacing">
+                Rate Movie
+              </button>
+            </li>
+            <li class="nav-item">
+              <button id="themeToggleBtn" class="btn btn-info">Toggle Theme</button>
+            </li>
+            <li class="nav-item">
+              <button id="logoutBtn" class="btn btn-danger">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mt-4">
+        <div
+          id="tvShowsCarousel"
+          class="carousel slide mb-4"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#tvShowsCarousel"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#tvShowsCarousel" data-slide-to="1"></li>
+            <li data-target="#tvShowsCarousel" data-slide-to="2"></li>
+            <li data-target="#tvShowsCarousel" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://images.bauerhosting.com/legacy/media/619d/be32/5165/433b/cc3b/7c8f/3%20Godfather.jpg?auto=format&w=992&q=80"
+                class="d-block w-100"
+                alt="The Godfather"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>The Godfather</h5>
+                <p>A crime masterpiece that defined an era.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.bauerhosting.com/legacy/media/619d/bd81/3ebe/47b5/fa9c/e4ac/4%20dark%20knight.jpg?auto=format&w=992&q=80"
+                class="d-block w-100"
+                alt="The Dark Knight"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>The Dark Knight</h5>
+                <p>The superhero movie that raised the bar.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.bauerhosting.com/legacy/media/619d/bb98/3ebe/4758/9d9c/e49e/8%20Infinity%20War.jpg?auto=format&w=992&q=80"
+                class="d-block w-100"
+                alt="Avengers: Infinity War"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Avengers: Infinity War</h5>
+                <p>An epic culmination of the Marvel Cinematic Universe.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.bauerhosting.com/legacy/media/619d/b942/3ebe/473a/489c/e486/13%20BTTF.jpg?auto=format&w=992&q=80"
+                class="d-block w-100"
+                alt="Back to the Future"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Back to the Future</h5>
+                <p>A timeless adventure through time travel.</p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#tvShowsCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#tvShowsCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h2>Popular TV Shows</h2>
+          <p>
+            Explore the best TV shows from different genres and streaming
+            services.
+          </p>
+          <figure>
+            <img
+              src="https://www.cnet.com/a/img/resize/b7b1b825a1dca3c6d58f53e2c14284f9d8b93095/hub/2017/03/23/aa8259de-b554-47b1-ab6a-bc8927c758ba/amazon-prime-tv-shows-promo.jpg?auto=webp&fit=crop&height=675&width=1200"
+              alt="Popular TV Shows"
+              class="img-fluid rounded"
+            />
+            <figcaption>
+              A collection of popular TV shows currently trending.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <h2>Top Movies</h2>
+          <p>
+            Catch up with the latest blockbusters, classic films, and indie
+            favorites.
+          </p>
+          <figure>
+            <img
+              src="https://www.vanas.ca/images/blog/vfx-visual-effects-vanas.jpg"
+              alt="Top Movies"
+              class="img-fluid rounded"
+            />
+            <figcaption>A display of top-rated movies this year.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <blockquote class="blockquote text-center">
+        <p class="mb-0">
+          "Movies and TV shows allow us to live a thousand lives, feel infinite
+          emotions, and dive into limitless worlds — all from the comfort of our
+          seat."
+        </p>
+      </blockquote>
+
+      <div id="additionalContent" style="display: none;">
+        <p>
+          Movies and TV shows allow us to live a thousand lives, feel infinite emotions, and dive into limitless worlds 
+          — all from the comfort of our seat. They transport us across time, space, and even dimensions, offering insights 
+          into cultures, history, and futures we can only imagine. Whether we're laughing, crying, or holding our breath in 
+          suspense, every story shapes our perception, challenges our beliefs, and connects us to the larger human experience. 
+          Through the magic of storytelling, we become heroes, villains, dreamers, and lovers, experiencing adventures that 
+          transcend the limits of reality.
+        </p>
+      </div>
+      <button id="readMoreBtn">Read More</button>
+
+      <h2 class="popular-section-heading">Explore Popular Movies and TV Shows</h2>
+      <div class="filter-container mb-4">
+        <label for="filterSelect" class="mr-2">Filter by Category:</label>
+        <select id="filterSelect" class="form-control d-inline-block" style="width: 200px;">
+          <option value="all">All</option>
+          <option value="movies">Movies</option>
+          <option value="tvshows">TV Shows</option>
+        </select>
+      </div>
+      <div id="filteredResults" class="mt-3">
+      </div>
+
+      <div class="container mt-5">
+        <div class="row mt-4" id="cardsContainer"></div>
+      </div>
+
+      <section id="faqs" class="mt-4">
+        <h1>FAQs</h1>
+        <div class="accordion">
+          <div class="faq">
+            <h3 class="faq-title" tabindex="0">What are the best movies to watch right now?</h3>
+            <div class="faq-content">
+              The best movies to watch right now vary by personal taste and genre. Some current fan-favorites include <em>Dune</em>, <em>Spider-Man: No Way Home</em>, and <em>Top Gun: Maverick</em>. Streaming services like Netflix, Disney+, and Amazon Prime regularly update their libraries with new releases.
+            </div>
+          </div>
+          <div class="faq">
+            <h3 class="faq-title" tabindex="0">Where can I stream classic movies?</h3>
+            <div class="faq-content">
+              Classic movies are available on various streaming platforms. You can watch them on services like Turner Classic Movies (TCM), Criterion Channel, HBO Max, and Amazon Prime Video. These platforms feature a wide range of classic films from different genres and eras.
+            </div>
+          </div>
+          <div class="faq">
+            <h3 class="faq-title" tabindex="0">What genres of movies are available on streaming platforms?</h3>
+            <div class="faq-content">
+              Streaming platforms offer a variety of genres such as action, drama, comedy, thriller, horror, science fiction, romance, documentaries, and animation. Platforms like Netflix, Hulu, and Disney+ provide easy access to explore films by genre.
+            </div>
+      </section>
+      
+
+      <div id="popupOverlay"></div>
+      <div id="popupForm">
+        <h2>Rate Movie</h2>
+        <form id="ratingForm" class="p-4 rounded">
+          <div class="form-group">
+            <label for="popup-movie-name">Movie Name:</label>
+            <input type="text" class="form-control" id="popup-movie-name" name="movieName" />
+          </div>
+      
+          <div class="form-group">
+            <label for="popup-rating">Your Rating:</label>
+            <div class="rating-system" id="popup-rating">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+            <p id="ratingMessage"></p>
+          </div>
+      
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="reset" id="resetFormBtn" class="btn btn-secondary">Reset Form</button>
+          <button id="closeBtn" type="button" class="btn btn-secondary">Close</button>
+        </form>
+      </div>           
+
+      <div class="movie-search-container mt-4">
+        <h2>Search for a Movie</h2>
+        <div class="form-group">
+          <input
+            type="text"
+            id="movieSearchInput"
+            class="form-control"
+            placeholder="Enter movie title..."
+          />
+        </div>
+        <button id="movieSearchBtn" class="btn btn-primary">Search</button>
+      </div>
+      <div id="movieInfo" class="mt-4"></div>      
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+      <p>Created by Yasmin Tleukhan - November 2024</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

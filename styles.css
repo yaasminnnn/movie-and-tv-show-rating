@@ -1,0 +1,307 @@
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #000;
+  --nav-bg-color: #343a40;
+  --btn-bg-color: #007bff;
+  --faq-bg-color: #f7f7f7;
+  --faq-border-color: #ddd;
+  --form-bg-color: #fff;
+  --form-border-color: #ccc;
+  --card-bg-color: #fff;
+  --card-border-color: #ddd;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: var(--nav-bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+.accordion .faq-title {
+  cursor: pointer;
+  padding: 10px;
+  background-color: var(--faq-bg-color);
+  border: 1px solid var(--faq-border-color);
+  margin-bottom: -1px;
+}
+
+.accordion .faq-content {
+  padding: 10px;
+  border: 1px solid var(--faq-border-color);
+  display: none;
+}
+
+.star {
+  font-size: 30px;
+  cursor: pointer;
+  color: gray;
+}
+
+.star.selected {
+  color: gold;
+}
+
+/* navbar styling */
+.navbar {
+  background-color: var(--nav-bg-color);
+}
+
+button {
+  background-color: var(--btn-bg-color);
+  color: #fff;
+}
+
+/* form popup styling */
+#popupForm {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+  background-color: var(--form-bg-color);
+  padding: 20px;
+  border: 1px solid var(--form-border-color);
+  max-width: 500px;
+  width: 100%;
+}
+
+#popupForm .form-group {
+  margin-bottom: 15px;
+}
+
+#popupForm .form-control {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+}
+
+#popupOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+}
+
+.card-body {
+  color: var(--text-color);
+}
+
+.night-theme {
+  --bg-color: #2c2c2c;
+  --text-color: #fff;
+  --nav-bg-color: #212529;
+  --btn-bg-color: #6c757d;
+  --faq-bg-color: #444;
+  --faq-border-color: #555;
+  --form-bg-color: #333;
+  --form-border-color: #444;
+  --card-bg-color: #333;
+  --card-border-color: #555;
+}
+
+.night-theme button {
+  background-color: #555;
+  color: #fff;
+}
+
+.form-container {
+  margin-top: 50px;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.popular-section-heading{
+  margin-top: 30px;
+}
+
+/* login */
+.login-container {
+  background-color: var(--form-bg-color);
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto; 
+  text-align: left; 
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.login-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.login-container .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.login-container .btn {
+  background-color: var(--btn-bg-color);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login-container .btn:hover {
+  background-color: #0056b3;
+}
+
+#loginMessage {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+.signup-container {
+  background-color: var(--form-bg-color);
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto;
+  text-align: left;
+}
+
+.signup-container h1 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.signup-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.signup-container .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.signup-container .btn {
+  background-color: var(--btn-bg-color);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.signup-container .btn:hover {
+  background-color: #0056b3; 
+}
+
+#signupMessage {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+.profile-container {
+  margin: 50px auto;
+  max-width: 800px;
+  text-align: left;
+  padding: 20px;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h1, .profile-container h2 {
+  color: var(--text-color);
+}
+
+.profile-container p {
+  color: var(--text-color);
+}
+
+.custom-btn-spacing {
+  margin-right: 10px;
+}
+
+.movie-search-container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+#movieInfo .card {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#movieInfo img {
+  max-height: 400px;
+  object-fit: contain;
+}
+
+#movieInfo .card-img-top {
+  margin-top: 20px;
+  max-height: 400px;
+  object-fit: contain;
+}

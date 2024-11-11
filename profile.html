@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Movie & TV Show Rating</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button id="contactUsBtn" class="btn btn-primary ml-2 custom-btn-spacing">
+              Rate Movie
+            </button>
+          </li>
+          <li class="nav-item">
+            <button id="themeToggleBtn" class="btn btn-info custom-btn-spacing">Toggle Theme</button>
+          </li>
+          <li class="nav-item">
+            <button id="logoutBtn" class="btn btn-danger">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <main class="container mt-4">
+    <div class="profile-container mt-4">
+      <h1>Welcome, <span id="userName"></span>!</h1>
+      <p>Email: <span id="userEmail"></span></p>
+      <h2>Your Ratings</h2>
+      <div id="ratingsContainer" class="mt-3"></div>
+    </div>
+  </main>
+
+  <div id="popupOverlay"></div>
+  <div id="popupForm">
+    <h2>Rate Movie</h2>
+    <form id="ratingForm" class="p-4 rounded">
+      <div class="form-group">
+        <label for="popup-movie-name">Movie Name:</label>
+        <input type="text" class="form-control" id="popup-movie-name" name="movieName" />
+      </div>
+  
+      <div class="form-group">
+        <label for="popup-rating">Your Rating:</label>
+        <div class="rating-system" id="popup-rating">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <p id="ratingMessage"></p>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" id="resetFormBtn" class="btn btn-secondary">Reset Form</button>
+      <button id="closeBtn" type="button" class="btn btn-secondary">Close</button>
+    </form>
+  </div>      
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="profileScript.js"></script>
+
+</body>
+</html>
